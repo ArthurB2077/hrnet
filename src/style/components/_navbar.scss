@@ -1,0 +1,23 @@
+.navbar {
+    background-color: $green-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    .navbar-title {
+        color: $white-primary;
+        margin: 0 15px;
+        font-size: 1.75em;
+        font-weight: 500;
+    }
+    .navbar-link {
+        color: $white-primary;
+        font-weight: 400;
+        font-size: 1em;
+        text-decoration: none;
+        margin-right: 15px;
+        // &:hover {
+        //     color: $green-secondary;
+        // }
+    }
+}

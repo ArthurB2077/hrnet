@@ -1,0 +1,51 @@
+.nav-panel {
+    background-color: $green-primary;
+    border-radius: 10px;
+    width: 25vw;
+    padding: 15px;
+    color: $white-primary;
+    margin-right: 45px;
+    .nav-panel-title {
+        color: $white-primary;
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-size: 1.5em;
+        font-weight: 500;
+        font-style: normal;
+    }
+    .nav-panel-description {
+        color: $white-primary;
+        font-size: 1em;
+        font-weight: 400;
+    }
+    .nav-panel-svg-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 45px;
+        .nav-panel-svg {
+            fill: $white-primary;
+            width: 25%;
+            height: 25%;
+        }
+    }
+    .nav-panel-link-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .nav-panel-link {
+            background-color: $white-primary;
+            color: $green-primary;
+            font-weight: 550;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 5px;
+            padding: 10px;
+            margin: auto;
+            // &:hover {
+            //     color: $green-secondary;
+            // }
+        }
+    }
+}   
