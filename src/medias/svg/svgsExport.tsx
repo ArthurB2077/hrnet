@@ -1,6 +1,6 @@
 const renderAddEmployeeSVG: Function = (className: string): JSX.Element => {
     return(
-        <svg viewBox="0 0 512 512" className={className}>
+        <svg viewBox="0 0 512 512" className={className} style={{marginLeft: "15px"}}>
             <g>
                 <g>
                     <path d="M220.821,0c-54.654,0-99.119,44.464-99.119,99.119c0,54.653,44.465,99.118,99.119,99.118
