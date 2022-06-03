@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from "react"
+import { Link } from "react-router-dom"
 
 interface Props {
     title: string,
@@ -23,7 +23,7 @@ const NavPanel: React.FC<Props> = ({ title, description, svg , link }): JSX.Elem
                 <Link to={link.to} className="nav-panel-link">{link.text}</Link>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default NavPanel;
+export default NavPanel

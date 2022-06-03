@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from "react"
+import { Link } from "react-router-dom"
 
 const NavBar: React.FC = (): JSX.Element => {
     return(
@@ -9,6 +9,6 @@ const NavBar: React.FC = (): JSX.Element => {
             <Link to="#" className="navbar-link">Employees</Link>
         </nav>
     )
-};
+}
 
-export default NavBar;
+export default NavBar

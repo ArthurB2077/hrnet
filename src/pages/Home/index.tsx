@@ -1,5 +1,5 @@
-import React from "react";
-import NavPanelMenu from "../NavPanelMenu";
+import React from "react"
+import NavPanelMenu from "../../components/NavPanelMenu"
 
 const Home: React.FC = (): JSX.Element => {
 
@@ -8,6 +8,6 @@ const Home: React.FC = (): JSX.Element => {
             <NavPanelMenu/>
         </div>
     )
-};
+}
 
-export default Home;
+export default Home

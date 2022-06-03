@@ -24,7 +24,7 @@ const renderAddEmployeeSVG: Function = (className: string): JSX.Element => {
             </g>
         </svg>
     )
-};
+}
 
 const renderViewEmployeesSVG: Function = (className: string): JSX.Element => {
     return(
@@ -70,6 +70,6 @@ const renderViewEmployeesSVG: Function = (className: string): JSX.Element => {
             </g>
         </svg>
     )
-};
+}
 
-export { renderAddEmployeeSVG, renderViewEmployeesSVG };
+export { renderAddEmployeeSVG, renderViewEmployeesSVG }

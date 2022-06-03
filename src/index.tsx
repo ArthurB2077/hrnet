@@ -4,7 +4,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import { Provider } from 'react-redux';
 // import { configureStore } from '@reduxjs/toolkit'
-import Home from './components/Home';
+import Home from './pages/Home';
 import NavBar from './components/NavBar';
 import "./style/main.scss";
 

@@ -1,6 +1,6 @@
-import React from "react";
-import NavPanel from "../NavPanel";
-import { renderAddEmployeeSVG, renderViewEmployeesSVG } from "../../medias/svg/svgsExport";
+import React from "react"
+import NavPanel from "../NavPanel"
+import { renderAddEmployeeSVG, renderViewEmployeesSVG } from "../../medias/svg/svgsExport"
 
 const NavPanelMenu: React.FC = (): JSX.Element => {
 
@@ -26,6 +26,6 @@ const NavPanelMenu: React.FC = (): JSX.Element => {
             />
         </div>
     )
-};
+}
 
-export default NavPanelMenu;
+export default NavPanelMenu
