@@ -5,20 +5,19 @@ import {
     RETRIEVE_EMPLOYEE_ERROR, 
     CREATE_EMPLOYEE_SUCCESS, 
     CREATE_EMPLOYEE_LOADING, 
-    CREATE_EMPLOYEE_ERROR,
-    GENERATE_EMPLOYEES
-} from '../../constants/action-types/index'
+    CREATE_EMPLOYEE_ERROR
+} from '../../constants/action-types'
 
 interface Employee {
-    "First Name": string,
-    "Last Name": string,
-    "Birth": string,
-    "Start Date": string,
-    "Department": string,
-    "Street": string,
-    "City": string,
-    "State": string,
-    "Zip Code": string
+    "firstName": string,
+    "lastName": string,
+    "dateOfBirth": string,
+    "startDate": string,
+    "department": string,
+    "street": string,
+    "city": string,
+    "state": string,
+    "zipCode": string
 }
 
 interface EmployeesState {
@@ -40,7 +39,8 @@ export const employeeReducer = (state: EmployeesState = initialState, action: An
         case RETRIEVE_EMPLOYEE_SUCCESS:
             return {
                 ...state,
-                data: action.payload.content,
+                // Reducer have to handle the integrity of data because there is no database for this project
+                data: state.data !== null ? [...state.data, ...action.payload.content].filter((employee: Employee, index: number, mergedArray: Employee[]) => mergedArray.indexOf(employee) === index) : action.payload.content,
                 loading: false,
                 error: null,
                 message: "Employees retrieved successfully",
@@ -80,11 +80,6 @@ export const employeeReducer = (state: EmployeesState = initialState, action: An
                 loading: false,
                 error: action.payload.error,
                 message: "An error occurred while creating employee",
-            }
-        case GENERATE_EMPLOYEES:
-            return {
-                ...state,
-                data: state.data !== null ? [...state.data, ...action.payload.content] : action.payload.content
             }
         default:
             return state
