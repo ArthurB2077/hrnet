@@ -1,0 +1,55 @@
+.create-employee-form-header {
+    color: $black-primary;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.create-employee-form {
+    background-color: $green-primary;
+    color: $white-primary;
+    padding: 40px 60px;
+    border-radius: 10px;
+    .create-employee-form-input {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        label {
+            margin-bottom: 5px;
+        }
+        input, select {
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .create-employee-form-input-group {
+        border: 1px solid $white-primary;
+        margin-bottom: 20px;
+        padding: 20px;
+        position: relative;
+        margin-top: 30px;
+        .create-employee-form-input-group__title{
+            position: absolute;
+            z-index: 5;
+            top: -10px;
+            background-color: $green-primary;
+        }
+    }
+    .create-employee-form-input-button {
+        display: flex;
+        justify-content: center;
+        .create-employee-form-button {
+            background-color: $white-primary;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+    }
+}

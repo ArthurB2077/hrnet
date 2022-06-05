@@ -4,9 +4,9 @@ import NavPanelMenu from "../../components/NavPanelMenu"
 const Home: React.FC = (): JSX.Element => {
 
     return(
-        <div className="home">
+        <main className="home">
             <NavPanelMenu/>
-        </div>
+        </main>
     )
 }
 

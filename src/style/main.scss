@@ -4,7 +4,10 @@
 @import "utils/variables";
 
 @import "pages/home";
+@import "pages/new-employee";
 
-@import "components/navbar";
+@import "layout/navbar";
+
 @import "components/nav-panel-menu";
 @import "components/nav-panel";
+@import "components/create-employee-form";
