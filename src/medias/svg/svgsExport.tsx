@@ -72,4 +72,16 @@ const renderViewEmployeesSVG: Function = (className: string): JSX.Element => {
     )
 }
 
-export { renderAddEmployeeSVG, renderViewEmployeesSVG }
+const renderClose: Function = (className: string): JSX.Element => {
+    return(
+        <svg viewBox="0 0 512 512" className={className}>
+            <g>
+                <path d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z M383.28,340.858l-42.422,42.422
+                    L256,298.422l-84.858,84.858l-42.422-42.422L213.578,256l-84.858-84.858l42.422-42.422L256,213.578l84.858-84.858l42.422,42.422
+                    L298.422,256L383.28,340.858z"/>
+            </g>
+        </svg>
+    )
+}
+
+export { renderAddEmployeeSVG, renderViewEmployeesSVG, renderClose }
