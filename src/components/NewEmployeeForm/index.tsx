@@ -27,6 +27,8 @@ interface EmployeesState {
 
 const NewEmployeeForm: React.FC = () => {
     const [showModal, setShowModal] = useState<boolean>(false)
+    const [submitButtonClicked, setSubmitButtonClicked] = useState<boolean>(false)
+    const [invalidForm, setInvalidForm] = useState<boolean>(false)
     const dispatch = useDispatch();
     const creationMessage = useSelector((state: EmployeesState) => state.employeeReducer.message);
     const firstNameRef = useRef<HTMLInputElement>(null);
@@ -40,10 +42,13 @@ const NewEmployeeForm: React.FC = () => {
     const departmentRef = useRef<HTMLSelectElement>(null);
 
     useEffect(() => {
-        if(creationMessage) {
+        if(creationMessage && submitButtonClicked) {
             setShowModal(true)
         }
-    }, [creationMessage])
+        if(submitButtonClicked) {
+            setSubmitButtonClicked(false)
+        }
+    }, [creationMessage, submitButtonClicked])
 
     const handleSubmit: Function = (e: React.FormEvent<HTMLFormElement>): void => {
         e.preventDefault()
@@ -72,11 +77,30 @@ const NewEmployeeForm: React.FC = () => {
 
         if(isValid(formValues)) {
             createEmployee(formValues)(dispatch)
+            if(firstNameRef && firstNameRef.current &&
+                lastNameRef && lastNameRef.current &&
+                dateOfBirthRef && dateOfBirthRef.current &&
+                startDateRef && startDateRef.current &&
+                departmentRef && departmentRef.current &&
+                streetRef && streetRef.current &&
+                cityRef && cityRef.current &&
+                stateRef && stateRef.current &&
+                zipCodeRef && zipCodeRef.current
+            ) {
+                firstNameRef.current.value = ""
+                lastNameRef.current.value = ""
+                dateOfBirthRef.current.value = ""
+                startDateRef.current.value = ""
+                departmentRef.current.value = ""
+                streetRef.current.value = ""
+                cityRef.current.value = ""
+                stateRef.current.value = ""
+                zipCodeRef.current.value = ""
+            }
         } else {
-            console.log("Invalid form values", formValues)
+            setInvalidForm(true)
         }
     }
-
 
     return (
         <>
@@ -133,11 +157,14 @@ const NewEmployeeForm: React.FC = () => {
                     </select>
                 </div>
                 <div className="create-employee-form-input-button">
-                    <button className="create-employee-form-button" type="submit">Save</button>
+                    <button className="create-employee-form-button" type="submit" onClick={() => setSubmitButtonClicked(true)}>Save</button>
                 </div>
             </form>
             {showModal && creationMessage &&
                 <Modal content={creationMessage} closeModal={setShowModal}/>
+            }
+            {invalidForm && 
+                <Modal content="Invalid fields values" closeModal={setShowModal} invalidFields={setInvalidForm}/>
             }
         </>
     )
