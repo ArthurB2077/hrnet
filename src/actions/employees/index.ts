@@ -69,16 +69,14 @@ export const retrieve: Function = (path: string = "/mocked-data/employee-mock-da
             "Content-Type": "application/json",
         }
     })
-    .then((res: Response) => (res.json()))
+    .then((res: Response) => res.json())
     .then((response: Response) => {
-        if(response.ok) {
-            dispatch({
-                type: RETRIEVE_EMPLOYEE_SUCCESS,
-                payload: {
-                    content: response.body
-                }
-            })
-        }
+        dispatch({
+            type: RETRIEVE_EMPLOYEE_SUCCESS,
+            payload: {
+                content: response
+            }
+        })
     })
     .catch((error: Error) => {
         dispatch({

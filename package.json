@@ -12,6 +12,7 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "react": "^18.1.0",
+    "react-delta-table": "^1.1.4",
     "react-dom": "^18.1.0",
     "react-redux": "^8.0.2",
     "react-router-dom": "6",
