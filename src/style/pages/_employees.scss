@@ -1,0 +1,14 @@
+.employees-table {
+    .data-table-container {
+        table {
+            .data-table-header {
+                .data-table-row {
+                    background-color: $green-primary !important;
+                    .data-table-header-cell__selected {
+                        background-color: $green-secondary !important;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -49,7 +49,7 @@ const Employees: React.FC = () => {
                             next: "Next",
                             last: "Last",
                         }}
-                        className=""
+                        className="employees-table"
                         theme="light"
                     />
                 }
