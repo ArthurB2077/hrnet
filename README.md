@@ -11,8 +11,9 @@ yarn install
 
 ```bash
 yarn start
-```
+``` 
+<p>&nbsp;</p>
 
-Made with: Webstorm - Code editor, SCSS - CSS Preprocessor, React, Typescript
+Made with: Webstorm - Code editor, SCSS - CSS Preprocessor, React - Javascript framework, Typescript
 
 Author: Arthur B
