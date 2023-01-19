@@ -3,6 +3,16 @@
 
 This project reproduce a simple bills company intern management
 
+### Start the project:
+
+```bash
+yarn install
+```
+
+```bash
+yarn start
+```
+
 Made with: Webstorm - Code editor, SCSS - CSS Preprocessor, React, Typescript
 
 Author: Arthur B
