@@ -1,1 +1,3 @@
-# arthurbequie_14_01062022
+# HRnet
+
+This project reproduce a simple bills company intern management
